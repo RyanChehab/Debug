@@ -18,7 +18,11 @@ class projectsController extends Controller
     public function addProject(Request $requst){
         $validated = $requst->validate([
             'name'=>'string|max255',
-            'description'=>
-        ])
+            'description'=>'string|required',
+            'color'=>'required',
+        ]);
+
+        $project = new Project;
+        $project
     }
 }
