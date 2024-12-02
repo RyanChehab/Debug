@@ -1,5 +1,9 @@
-const MemberIcon = ({ user }) => {
-  const { name, color } = user;
+import React from "react";
+import { useContext } from "react";
+import { MyContext } from "../context/user";
+
+const MemberIcon = () => {
+  const { name, color } = useContext(MyContext);
 
   return (
     <div className={`member-icon ${color}`}>

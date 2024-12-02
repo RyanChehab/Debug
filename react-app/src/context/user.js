@@ -10,14 +10,15 @@ const ContextProvider = ({ children }) => {
         const response = await axios.post("http://127.0.0.1:8000/api/projects")
 
         console.log(response.data)
-    }catch(error){
-        console.error("problem fetching the api")
-    }
+
+        }catch(error){
+            console.error("problem fetching the api")
+        }
         
     }   
     
     return (
-        <MyContext.Provider value={{ }}>
+        <MyContext.Provider value={{name,color,description, members}}>
             {children}
         </MyContext.Provider>
     );

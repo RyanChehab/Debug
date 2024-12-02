@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 class projectsController extends Controller
@@ -13,5 +13,12 @@ class projectsController extends Controller
             'message'=>'retrieved successfully',
             'data'=> $record,
         ],201);
+    }
+
+    public function addProject(Request $requst){
+        $validated = $requst->validate([
+            'name'=>'string|max255',
+            'description'=>
+        ])
     }
 }
