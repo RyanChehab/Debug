@@ -1,7 +1,10 @@
 import MemberIcon from "./MemberIcon";
+import { useContext } from "react";
+import { MyContext } from "../context/user";
 
-const Project = ({ project }) => {
-  const { name, description, members } = project;
+const Project = () => {
+
+  const { name, description, members } = useContext(MyContext);
 
   return (
     <div className="project-card">
